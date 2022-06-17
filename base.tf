@@ -12,6 +12,11 @@ provider "aws" {
     tags = {
       Project   = "terraform-sharing"
       Terraform = true
+      TerraformStateID = random_id.terraform_state_id.hex
     }
   }
+}
+
+resource "random_id" "terraform_state_id" {
+  byte_length = 4
 }
