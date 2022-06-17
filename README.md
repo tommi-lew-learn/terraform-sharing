@@ -25,7 +25,7 @@ asdf install
 ```
 Other installation options [here](https://www.terraform.io/downloads).
 
-### [direnv](https://direnv.net/) (Optional)
+### (Optional) [direnv](https://direnv.net/)
 ```
 brew install direnv
 ```
@@ -41,6 +41,8 @@ cp .envrc.template .envrc
 2. You will require an AWS account that has permissions to create VPCs, subnets, RDS databases, S3 buckets and EC2 instances. Ensure you have an IAM account that has the necessary permissions to create and configure these services. If you are testing on a root account, I highly recommend you to create an IAM account for this purpose.
 
 1. Generate an access key and update variables in `.envrc`. If you are not using direnv, setup accordingly.
+
+1. You may also want to log into [AWS Console](https://console.aws.amazon.com/console/home) to observe the changes made by Terraform.
 
 ## Create resources on AWS
 Initialize the working directory
