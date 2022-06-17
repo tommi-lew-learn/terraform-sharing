@@ -4,6 +4,8 @@ resource "aws_db_instance" "example" {
   # Reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html
   instance_class = "db.t3.micro"
 
+  allocated_storage = 10
+
   db_name  = "db_name"
   username = "db_username"
   password = "db_password"
