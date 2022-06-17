@@ -1,5 +1,8 @@
 # Terraform
 .terraform
 
+# Ignore local terraform state
+*tfstate*
+
 # Ignore direnv's .envrc
 .envrc
