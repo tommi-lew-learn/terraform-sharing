@@ -1,2 +1,5 @@
 # Terraform 
 .terraform
+
+# Ignore direnv's .envrc
+.envrc
