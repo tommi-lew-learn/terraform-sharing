@@ -9,11 +9,11 @@ terraform {
 
 provider "aws" {
   default_tags {
-    tags = {
-      Project   = "terraform-sharing"
-      Terraform = true
-      TerraformStateID = random_id.terraform_state_id.hex
-    }
+    # tags = {
+    #   Project   = "terraform-sharing"
+    #   Terraform = true
+    #   TerraformStateID = random_id.terraform_state_id.hex
+    # }
   }
 }
 
