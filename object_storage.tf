@@ -1,5 +1,5 @@
 variable "bucket_names" {
-  type = list(string)
+  type    = list(string)
   default = ["apple", "banana", "calamansi"]
 }
 
@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "example" {
 
 resource "aws_s3_bucket_acl" "example_acl" {
   for_each = toset(var.bucket_names)
-  
+
   bucket = aws_s3_bucket.example[each.key].id
   acl    = "private"
 }
