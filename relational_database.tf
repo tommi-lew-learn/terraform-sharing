@@ -1,4 +1,6 @@
 resource "aws_db_instance" "example" {
+  count = 0
+
   engine = "postgres"
 
   # Reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html
