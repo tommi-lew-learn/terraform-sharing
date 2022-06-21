@@ -33,6 +33,6 @@ resource "random_id" "name_suffix" {
 
 output "object_storage_domain_names" {
   value = [
-    for bucket in aws_s3_bucket.example : b.bucket_domain_name
+    for bucket in aws_s3_bucket.example : bucket.bucket_domain_name
   ]
 }
