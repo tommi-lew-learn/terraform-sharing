@@ -13,6 +13,8 @@ resource "aws_s3_bucket_acl" "example_acl" {
   for_each = toset(var.bucket_names)
 
   bucket = aws_s3_bucket.example[each.key].id
+
+  # possible values: private public-read public-read-write authenticated-read aws-exec-read log-delivery-write
   acl    = "private"
 }
 
