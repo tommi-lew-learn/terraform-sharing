@@ -24,3 +24,11 @@ resource "aws_instance" "web" {
     Name = "example-ec2"
   }
 }
+
+output "virtual_machine_public_ip" {
+  value = aws_instance.web.public_ip
+}
+
+output "virtual_machine_public_dns" {
+  value = aws_instance.web.public_dns
+}
