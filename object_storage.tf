@@ -24,7 +24,7 @@ resource "aws_s3_bucket_acl" "example_acl" {
   bucket = aws_s3_bucket.example[each.key].id
 
   # possible values: private public-read public-read-write authenticated-read aws-exec-read log-delivery-write
-  acl    = "private"
+  acl = "private"
 }
 
 resource "random_id" "name_suffix" {
