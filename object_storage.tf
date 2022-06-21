@@ -9,6 +9,15 @@ resource "aws_s3_bucket" "example" {
   bucket = "example-bucket-${random_id.name_suffix.hex}-${each.key}"
 }
 
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  for_each = toset(var.bucket_names)
+
+  bucket = aws_s3_bucket.example[each.key].id
+  versioning_configuration {
+    status = "Disabled"
+  }
+}
+
 resource "aws_s3_bucket_acl" "example_acl" {
   for_each = toset(var.bucket_names)
 
