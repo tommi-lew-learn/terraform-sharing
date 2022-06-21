@@ -30,3 +30,9 @@ resource "aws_s3_bucket_acl" "example_acl" {
 resource "random_id" "name_suffix" {
   byte_length = 4
 }
+
+output "object_storage_domain_names" {
+  value = [
+    for bucket in aws_s3_bucket.example : b.bucket_domain_name
+  ]
+}
